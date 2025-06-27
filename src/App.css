@@ -4,11 +4,15 @@
 
 body{
   margin: 0;
-  background: linear-gradient(to right, rgb(175, 233, 224), rgb(241, 216, 220)) ;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  background: linear-gradient(to right, rgb(175, 233, 224), rgb(50, 158, 97)) ;
 }
 
 .calculator{
-  padding: 10px;
+  padding: 2px;
+  border-radius: 10px;
   background-color: black;
   display: inline-block;
   justify-content: center;
@@ -16,24 +20,76 @@ body{
 .container{
   display: grid;
   margin: 10px;
-  grid-template-columns: repeat(4, 6rem);
-  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);
 }
 
 .span-two{
   grid-column: span 2;
+  border-radius: 10px;
 }
 
 .output{
   grid-column: 1 / -1;
   background-color: rgba(244, 236, 236, 0.593);
-  display: flex;
+  display: grid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .previous-operand{
-  background-color: brown;
+  padding-right: 8px;
+  padding-top: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  font-size: 15px;
+  color: rgb(42, 42, 42);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .current-operand{
-  background-color: aqua;
+  padding-right: 8px;
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  font-size: 25px;
+  color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 } 
+
+.operand{
+  background-color: rgb(238, 179, 69);
+}
+.operand:hover,
+.operand:focus{
+  background-color: rgb(193, 138, 60);
+}
+
+#del-ac-btn{
+  background-color: rgb(96, 96, 196);
+}
+
+#del-ac-btn:hover,
+#del-ac-btn:focus{
+  background-color: rgb(140, 140, 222);
+}
+
+button{
+  margin: 3px;
+  background-color: rgb(234, 231, 231);
+  border: none;
+  border-radius: 50%;
+  font-size: medium;
+  font-weight: bold;
+}
+
+button:hover,
+button:focus{
+  background-color: rgb(153, 153, 153);
+}
